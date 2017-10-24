@@ -1,0 +1,25 @@
+<mvc:View controllerName="twodata.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" visible="false" >
+	<tnt:ToolPage class="" id="tlpMainToolPage">
+		<tnt:header class="sapUiSizeCozy">
+			<tnt:ToolHeader class="sapUiSizeCozy">
+				<core:Fragment fragmentName="twodata.fragment.Toolbar" type="XML"/>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<core:Fragment fragmentName="twodata.fragment.SideNavigation" type="XML"/>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<layout:DynamicSideContent id="idDynamicSideContent" showSideContent="false">
+				<layout:mainContent>
+					<core:Fragment fragmentName="twodata.fragment.NavContainer" type="XML"/>
+				</layout:mainContent> 
+				<layout:sideContent>
+					<Page id="idSideContent" showHeader="false" backgroundDesign="Solid" class="helpSideContent">
+						<Text text="{framework>HelpContentSide}"></Text>
+					</Page>
+				</layout:sideContent> 
+			</layout:DynamicSideContent>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

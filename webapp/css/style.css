@@ -1,0 +1,84 @@
+/* Enter your custom styles here */
+.sapUiSizeCompact .sapMBtnInner>img {
+    height: 1rem !important;
+    width: 1rem !important;
+    margin-left: 0.450rem !important;
+    margin-right: 0.250rem !important;
+    margin-top: 0.250rem !important;
+}
+.belizeBG {
+    background-color: #2f3c48 !important;
+}
+.sideNav {
+    /*background-image: url("../icon/Deutsche_Boerse_Group_Logo.svg") !important;*/
+}
+.tileIcon {
+    font-family: 'SAP-icons';
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+.grey {
+    color: #333333;
+}
+.helpSideContent {
+    background-color: #7891a7;
+    border-left: 3px solid #2f3c48;
+}
+.transparentBackground {
+    background-Color: rgba(255, 255, 255, 0) !important;
+}
+.loadingDiv {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 10%;
+}
+.loadingIcon {
+    width: 100%;
+    left: -50%;
+    position: relative;
+    top: -50%;
+    animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+    50% {
+        webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+    100% {
+        webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.loadingProgressBar {
+    top: 10px;
+    width: 120%;
+    position: relative;
+    height: 0.3rem;
+    left: -60%;
+}
+.progress-wrap {
+    background: white;
+    overflow: hidden;
+}
+.progress-wrap .progress-bar {
+    background: #2f3c48;
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 0.5rem;
+    width: 100%;
+    -webkit-transition: left 0.5s; /* Safari */
+    transition: left 0.5s;
+}
+body {
+    margin: 0px;
+}

@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+	<NavContainer initialPage="navigationPage" id="navCon">
+		<pages>
+			<Page backgroundDesign="Solid" enableScrolling="false" id="navigationPage" showHeader="false">  
+				<TileContainer height="100%" tiles="{masterData>/Companies}">
+					<StandardTile icon="{masterData>Icon}" number="{masterData>Tasks}" numberUnit="Tasks" title="{masterData>Name}" info="{masterData>Info}"
+						infoState="{masterData>State}" press="onTilePress"/>
+				</TileContainer>
+			</Page>
+		</pages>
+	</NavContainer>
+</core:FragmentDefinition>

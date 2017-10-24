@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Button icon="sap-icon://menu2" type="Transparent" press="toggleSideNavigation">
+		<layoutData>
+			<OverflowToolbarLayoutData priority="NeverOverflow"/>
+		</layoutData>
+	</Button>
+	<Text text="2Data"></Text>
+	<ToolbarSpacer xmlns="sap.m">
+		<layoutData>
+			<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="0px"/>
+		</layoutData>
+	</ToolbarSpacer>
+	<Button icon="sap-icon://bell" type="Transparent">
+		<layoutData><OverflowToolbarLayoutData group="2"/></layoutData>
+	</Button>
+	<ToolbarSeparator visible="{= !${device>/system/phone}}">
+		<layoutData><OverflowToolbarLayoutData group="2"/></layoutData>
+	</ToolbarSeparator>
+	<Button icon="sap-icon://employee" type="Transparent" visible="true"
+		text="Francois" press="openUserMenu">
+		<layoutData><OverflowToolbarLayoutData group="2"/></layoutData>
+	</Button>
+</core:FragmentDefinition>
