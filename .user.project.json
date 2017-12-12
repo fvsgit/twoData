@@ -25,7 +25,7 @@
         "id": "6696111",
         "runnerId": "webapprunner",
         "displayName": "App",
-        "lastRunTimeStamp": 1508876812182
+        "lastRunTimeStamp": 1513104289265
       }
     },
     {
@@ -135,5 +135,28 @@
         "displayName": "Test Suite (Unit, OPA)"
       }
     }
-  ]
+  ],
+  "hybrid": {
+    "dirty": true,
+    "cordovaContainerId": "a1bde530eb153980df6ffe7afd0308b9",
+    "cordovaPackageId": "d1e3448f104a6e5f89f9b2e6d99257eb",
+    "commonError": "",
+    "callStart": "2017-11-30T06:54:25.446Z",
+    "packagingEnd": "2017-11-30T06:55:37.913Z",
+    "packagingStart": "2017-11-30T06:54:37.014Z",
+    "results": {
+      "ios": {},
+      "android": {
+        "requested": true,
+        "buildStart": "2017-11-30T06:55:58.076Z",
+        "errorMessage": "",
+        "error": "",
+        "done": true,
+        "appId": "4b1b3c59b2366f85e617609a1435d27c",
+        "appVersion": "1.0",
+        "downloadPath": "https://trial-p795367trial.sapmobileplace.com/public-api.svc/download/4b1b3c59b2366f85e617609a1435d27c%3Fhmac%3Da747907ccbc73a9223a64ad2e1966c1109ee526fa35fdf7c1bdd26d4a877bb01%26expires%3D2017-12-30T06%3A59%3A40%2B00%3A00%26logToken%3Daf37997df424d434e1fdcffa5dadbc11"
+      }
+    },
+    "hcpmsAppId": "com.sap.fiorimobile.xa1bde530eb153980df6ffe7afd0308b9"
+  }
 }
