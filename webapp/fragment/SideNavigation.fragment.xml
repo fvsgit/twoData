@@ -1,16 +1,16 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 	<tnt:SideNavigation class="sideNav" expanded="true">
 		<tnt:NavigationList itemSelect="onNavigationItemSelect" id="idNavigationList">
-			<tnt:NavigationListItem icon="sap-icon://building" text="Companies" key="Companies" items="{masterData>/Companies}">
-				<tnt:NavigationListItem icon="{masterData>Icon}" text="{masterData>Name}" key="{masterData>Id}">
+			<tnt:NavigationListItem icon="sap-icon://building" text="Companies" key="Companies" items="{masterData>/Companies}" select="onSelect_MenuItem" app:navPath="main">
+				<tnt:NavigationListItem icon="{masterData>Icon}" text="{masterData>Name}" key="{masterData>Id}" select="onSelect_MenuItem" app:navPath="company/{masterData>Id}">
 				</tnt:NavigationListItem>
 			</tnt:NavigationListItem>
 		</tnt:NavigationList>
 		<tnt:fixedItem>
 			<tnt:NavigationList>
-				<tnt:NavigationListItem text="Settings" icon="sap-icon://action-settings" select=""></tnt:NavigationListItem>
-				<tnt:NavigationListItem text="Synchronize" icon="sap-icon://synchronize" select=""></tnt:NavigationListItem>
-				<tnt:NavigationListItem text="Help" icon="sap-icon://sys-help" select=""></tnt:NavigationListItem>
+				<tnt:NavigationListItem text="Settings" icon="sap-icon://action-settings" select="onSelect_MenuItem" app:navPath="settings"></tnt:NavigationListItem>
+				<tnt:NavigationListItem text="Synchronize" icon="sap-icon://synchronize" select="onSelect_MenuItem" app:navPath="synchronize"></tnt:NavigationListItem>
+				<tnt:NavigationListItem text="Help" icon="sap-icon://sys-help" select="onSelect_MenuItem" app:navPath="help"></tnt:NavigationListItem>
 			</tnt:NavigationList>
 		</tnt:fixedItem>
 	</tnt:SideNavigation>

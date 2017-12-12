@@ -5,12 +5,19 @@ sap.ui.define([
 
 	return BaseController.extend("twodata.controller.Main", {
 
-		onInit: function() { 
+		onInit: function() {},
+		onSelect_MenuItem: function(oEvent) {
+			this.navigateToPath(oEvent.getSource().data("navPath"));
+			
+			//Only toggle the side menu when the device is a phone
+			if (this.deviceIsPhone()) {
+				this.toggleSideNavigation();
+			}
 		},
-		onTilePress: function(oEvent){
-				this.getRouter().navTo("tasks",{
+		onTilePress: function(oEvent) {
+			this.getRouter().navTo("tasks", {
 				companyId: 1
-			});			
+			});
 		},
 		toggleSideNavigation: function() {
 			var oToolPage = this.getView().byId("tlpMainToolPage");

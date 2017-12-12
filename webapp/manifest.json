@@ -80,47 +80,73 @@
 				},
 				"async": true
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "main",
-					"target": [
-						"main"
-					]
-				},
-				{
-					"pattern": "tasks/{companyId}",
-					"name": "tasks",
-					"target": [
-						"tasks"
-					]
-				},
-				{
-					"pattern": "Categories/{objectId}",
-					"name": "object",
-					"target": [
-						"object"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "main",
+				"target": [
+					"main"
+				]
+			}, {
+				"pattern": "company/{companyId}",
+				"name": "company", 
+				"target": [
+					"company"
+				]
+			}, {
+				"pattern": "settings",
+				"name": "settings",
+				"target": [
+					"settings"
+				]
+			}, {
+				"pattern": "help",
+				"name": "help",
+				"target": [
+					"help"
+				]
+			}, {
+				"pattern": "synchronize",
+				"name": "synchronize",
+				"target": [
+					"synchronize"
+				]
+			}, {
+				"pattern": "Categories/{objectId}",
+				"name": "object",
+				"target": [
+					"object"
+				]
+			}],
 			"targets": {
 				"main": {
 					"viewName": "Main",
 					"viewId": "main",
-					"viewLevel": 1,
-					"title": "2Data"
+					"viewLevel": 1
 				},
-				"tasks": {
-					"viewName": "Tasks",
-					"viewId": "tasks",
-					"viewLevel": 2,
-					"title": "Tasks"
+				"company": {
+					"viewName": "Company",
+					"viewId": "company",
+					"viewLevel": 2
+				},
+				"settings": {
+					"viewName": "Settings",
+					"viewId": "settings",
+					"viewLevel": 2
+				},
+				"help": {
+					"viewName": "Help",
+					"viewId": "help",
+					"viewLevel": 2
+				},
+				"synchronize": {
+					"viewName": "Synchronize",
+					"viewId": "synchronize",
+					"viewLevel": 2
 				},
 				"object": {
 					"viewName": "Object",
 					"viewId": "object",
-					"viewLevel": 2,
-					"title": "{i18n>objectViewTitle}"
+					"viewLevel": 2
 				},
 				"objectNotFound": {
 					"viewName": "ObjectNotFound",
