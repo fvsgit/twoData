@@ -1,10 +1,31 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="twodata.controller.Settings"
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="twodata.controller.Settings"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
 			<Page title="{i18n>titSettings}" showNavButton="true" navButtonPress="onNavBack">
-				<content>
-					<Text text="Settings Page!"></Text>
+				<content> 
+					<List headerText="GENRAL">
+						<items>
+							<StandardListItem title="Title 1" description="Description 1"/>
+							<StandardListItem title="Title 2" description="Description 2"/>
+						</items>
+					</List>
+					<List headerText="DATA USAGE">
+						<items>
+							<CustomListItem>
+								<content>
+									<l:HorizontalLayout class="sapUiTinyMargin">
+										<l:VerticalLayout class="sapUiTinyMargin">
+											<Text text="Test 1"></Text>
+											<Label text="ssss"></Label>
+										</l:VerticalLayout>
+										<Switch state="true"></Switch>
+									</l:HorizontalLayout>
+								</content>
+								<!-- sap.ui.core.Control -->
+							</CustomListItem>
+						</items>
+					</List>
 				</content>
 			</Page>
 		</pages>
