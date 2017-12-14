@@ -1,10 +1,26 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="twodata.controller.Help"
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="twodata.controller.Help"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="{i18n>titSettings}" showNavButton="true" navButtonPress="onNavBack">
+			<Page title="{i18n>titHelp}" showNavButton="true" navButtonPress="onNavBack">
 				<content>
-					<Text text="Help"></Text>
+					<List headerText="{i18n>titSoftwareInformation}">
+						<items>
+							<StandardListItem title="{i18n>titVersion}" description="1.2.34"/>
+							<StandardListItem title="{i18n>titBuildNumber}" description="1234567890"/>
+						</items>
+					</List>
+					<List headerText="{i18n>titDeviceInformation}">
+						<items>
+							<StandardListItem title="{i18n>titName}" description="My Phone's Name"/>
+							<StandardListItem title="{i18n>titDeviceId}" description="239487958743897945"/>
+						</items>
+					</List>
+					<List headerText="{i18n>titSupport}">
+						<items>
+							<StandardListItem title="{i18n>titHelpDesk}" description="{i18n>txtHelpDeskInfo}" type="Navigation"/> 
+						</items>
+					</List>
 				</content>
 			</Page>
 		</pages>
