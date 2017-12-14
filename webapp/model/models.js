@@ -11,6 +11,14 @@ sap.ui.define([
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
 		},
+		
+		createSettingsModel: function(){
+			var oModel = new JSONModel({
+				"ScreenOrientation": "Auto Rotate",
+				"Theme": "sap_belize"
+			});
+			return oModel;
+		},
 
 		createMasterDataModel: function() {
 			var oModel = new JSONModel({

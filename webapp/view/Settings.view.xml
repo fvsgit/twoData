@@ -15,7 +15,7 @@
 												<Label text="{i18n>txtScreenOrientationInfo}" wrapping="true"></Label>
 											</l:VerticalLayout>
 											<l:VerticalLayout class="sapUiSmallMargin">
-												<SegmentedButton id="btnScreenOrientation" selectedKey="{ViewModel>/ScreenOrientation}" class="sapUiSmallMarginBottom" select="onSelect_btnScreenOrientation">
+												<SegmentedButton id="btnScreenOrientation" selectedKey="{settings>/ScreenOrientation}" class="sapUiSmallMarginBottom" select="onSelect_btnScreenOrientation">
 													<items>
 														<SegmentedButtonItem icon="sap-icon://iphone" key="Portrait"/>
 														<SegmentedButtonItem icon="sap-icon://iphone-2" key="Landscape"/>
@@ -24,7 +24,7 @@
 												</SegmentedButton>
 												<FlexBox justifyContent="Center" alignItems="Stretch">
 													<items>
-														<Label text="{ViewModel>/ScreenOrientation}"></Label>
+														<Label text="{settings>/ScreenOrientation}"></Label>
 													</items> 
 												</FlexBox>
 											</l:VerticalLayout>
@@ -94,10 +94,10 @@
 												<Label text="{i18n>txtThemeInfo}" wrapping="true"></Label>
 											</l:VerticalLayout>
 											<l:VerticalLayout class="sapUiSmallMargin">
-												<SegmentedButton selectedKey="light" class="sapUiSmallMarginBottom">
+												<SegmentedButton id="btnTheme" selectedKey="{settings>Theme}" class="sapUiSmallMarginBottom" select="onSelect_btnTheme">
 													<items>
-														<SegmentedButtonItem text="{i18n>txtLight}" key="light"/>
-														<SegmentedButtonItem text="{i18n>txtDark}"/>
+														<SegmentedButtonItem text="{i18n>txtLight}" key="sap_belize"/>
+														<SegmentedButtonItem text="{i18n>txtDark}" key="sap_hcb"/>
 													</items>
 												</SegmentedButton>
 											</l:VerticalLayout>

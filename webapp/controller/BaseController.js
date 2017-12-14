@@ -103,6 +103,11 @@ sap.ui.define([
 			
 			//Get the device model and retur the value of the phone setting
 			return this.getModel("device").getData().system.phone;
+		},
+		
+		switchTheme: function(){
+			//Get the selected theme and set it
+			sap.ui.getCore().applyTheme(this.getModel("settings").getProperty("/Theme"));
 		}
 
 	});

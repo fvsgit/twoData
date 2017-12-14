@@ -13,8 +13,8 @@
     "excludedFiles": [
       "test.html"
     ],
-    "buildRequired": false,
-    "lastBuildDateTime": "Thu, 14 Dec 2017 07:44:05 GMT"
+    "buildRequired": true,
+    "lastBuildDateTime": "Thu, 14 Dec 2017 07:49:40 GMT"
   },
   "dataBinding": {
     "/webapp/view/App.view.xml": {
@@ -404,6 +404,6 @@
   "hcpdeploy": {
     "account": "p795367trial",
     "name": "twodata",
-    "lastVersionWeTriedToDeploy": "1.0.1"
+    "lastVersionWeTriedToDeploy": "1.0.2"
   }
 }

@@ -30,9 +30,15 @@ sap.ui.define([
 			
 			//Create the master data model
 			this.setModel(models.createMasterDataModel(), "masterData");
+			
+			//Create the settings model
+			this.setModel(models.createSettingsModel(), "settings");
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
+			
+			//set the theme
+			sap.ui.getCore().applyTheme(this.getModel("settings").getProperty("/Theme"));
 		},
 
 		/**
