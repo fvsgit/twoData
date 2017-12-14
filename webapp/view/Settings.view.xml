@@ -3,26 +3,107 @@
 	<App>
 		<pages>
 			<Page title="{i18n>titSettings}" showNavButton="true" navButtonPress="onNavBack">
-				<content> 
-					<List headerText="GENRAL">
-						<items>
-							<StandardListItem title="Title 1" description="Description 1"/>
-							<StandardListItem title="Title 2" description="Description 2"/>
-						</items>
-					</List>
-					<List headerText="DATA USAGE">
+				<content>
+					<List headerText="{i18n>titGeneral}">
 						<items>
 							<CustomListItem>
 								<content>
-									<l:HorizontalLayout class="sapUiTinyMargin">
-										<l:VerticalLayout class="sapUiTinyMargin">
-											<Text text="Test 1"></Text>
-											<Label text="ssss"></Label>
-										</l:VerticalLayout>
-										<Switch state="true"></Switch>
-									</l:HorizontalLayout>
+									<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+										<items>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Label text="{i18n>titScreenOrientation}" design="Bold"></Label>
+												<Label text="{i18n>txtScreenOrientationInfo}" wrapping="true"></Label>
+											</l:VerticalLayout>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<SegmentedButton id="btnScreenOrientation" selectedKey="{ViewModel>/ScreenOrientation}" class="sapUiSmallMarginBottom" select="onSelect_btnScreenOrientation">
+													<items>
+														<SegmentedButtonItem icon="sap-icon://iphone" key="Portrait"/>
+														<SegmentedButtonItem icon="sap-icon://iphone-2" key="Landscape"/>
+														<SegmentedButtonItem icon="sap-icon://synchronize" key="Auto Rotate"/>
+													</items>
+												</SegmentedButton>
+												<FlexBox justifyContent="Center" alignItems="Stretch">
+													<items>
+														<Label text="{ViewModel>/ScreenOrientation}"></Label>
+													</items> 
+												</FlexBox>
+											</l:VerticalLayout>
+										</items>
+									</FlexBox>
 								</content>
-								<!-- sap.ui.core.Control -->
+							</CustomListItem>
+							<CustomListItem>
+								<content>
+									<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+										<items>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Label text="{i18n>titKeepHistory}" design="Bold"></Label>
+												<Label text="{i18n>txtKeepHistoryInfo}" wrapping="true"></Label>
+											</l:VerticalLayout>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Switch state="true" customTextOn="{i18n>butYes}" customTextOff="{i18n>butNo}"></Switch>
+											</l:VerticalLayout>
+										</items>
+									</FlexBox>
+								</content>
+							</CustomListItem>
+						</items>
+					</List>
+					<List headerText="{i18n>titDataUsage}">
+						<items>
+							<CustomListItem>
+								<content>
+									<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+										<items>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Label text="{i18n>titSyncWiFi}" design="Bold"></Label>
+												<Label text="{i18n>txtSyncWiFiInfo}" wrapping="true"></Label>
+											</l:VerticalLayout>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Switch state="true" customTextOn="{i18n>butYes}" customTextOff="{i18n>butNo}"></Switch>
+											</l:VerticalLayout>
+										</items>
+									</FlexBox>
+								</content>
+							</CustomListItem>
+							<CustomListItem>
+								<content>
+									<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+										<items>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Label text="{i18n>titAutoSync}" design="Bold"></Label>
+												<Label text="{i18n>txtAutoSyncInfo}" wrapping="true"></Label>
+											</l:VerticalLayout>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Switch state="true" customTextOn="{i18n>butYes}" customTextOff="{i18n>butNo}"></Switch>
+											</l:VerticalLayout>
+										</items>
+									</FlexBox>
+								</content>
+							</CustomListItem>
+						</items>
+					</List>
+					<List headerText="{i18n>titDesign}">
+						<items>
+							<CustomListItem>
+								<content>
+									<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+										<items>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<Label text="{i18n>titTheme}" design="Bold"></Label>
+												<Label text="{i18n>txtThemeInfo}" wrapping="true"></Label>
+											</l:VerticalLayout>
+											<l:VerticalLayout class="sapUiSmallMargin">
+												<SegmentedButton selectedKey="light" class="sapUiSmallMarginBottom">
+													<items>
+														<SegmentedButtonItem text="{i18n>txtLight}" key="light"/>
+														<SegmentedButtonItem text="{i18n>txtDark}"/>
+													</items>
+												</SegmentedButton>
+											</l:VerticalLayout>
+										</items>
+									</FlexBox>
+								</content>
 							</CustomListItem>
 						</items>
 					</List>

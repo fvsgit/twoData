@@ -1,13 +1,17 @@
 sap.ui.define([
 	"twodata/controller/BaseController",
-	"sap/m/GroupHeaderListItem"
-], function(BaseController, GroupHeaderListItem) {
+	"sap/m/GroupHeaderListItem",
+	"sap/ui/model/json/JSONModel"
+], function(BaseController, GroupHeaderListItem, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("twodata.controller.Settings", {
 
 		onInit: function() {
-
+			
+			//Setup the json models for the view 
+			this._setViewModels();
+			
 			//Attach the pattern matched event
 			this.getRouter().getRoute("settings").attachPatternMatched(this.onObjectMatched, this);
 
@@ -30,12 +34,27 @@ sap.ui.define([
 		},
 		onNavBack: function() {
 			this.navigateBack();
-		},
+		}, 
+		
 		getGroupHeader: function(oGroup) {
 			return new GroupHeaderListItem({
 				title: oGroup.key,
 				upperCase: true
 			});
+		},
+		
+		/** 
+		 * Creating and setting json models to the view
+		 * @function
+		 * @private
+		 */
+		_setViewModels: function(){
+			
+			//Create the model for data on the screen =
+			var oViewModel = new JSONModel({
+				"ScreenOrientation": "Auto Rotate"
+			});
+			this.getView().setModel(oViewModel, "ViewModel");
 		}
 	});
 
